@@ -1,0 +1,685 @@
+/* Reset */
+@import url("Reset.css");
+
+/*++++++++++++++++++   Main++++++++++++++++++   */
+.clear::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+}
+
+.center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.my-container {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.header-top {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid wheat;
+}
+
+.header-top .left {
+  float: left;
+}
+
+.header-top .right {
+  float: right;
+}
+
+.header-top .left ul li,
+.header-top .right ul li {
+  float: left;
+  padding: 0 20px;
+  border-right: 2px solid rgb(212, 212, 212);
+}
+
+.header-top .left ul li:last-child,
+.header-top .right ul li:last-child {
+  border-right: none;
+}
+
+.header-top .left ul li a,
+.header-top .right ul li a {
+  color: black;
+  transition: 0.2s ease;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.header-top .left ul li a:hover,
+.header-top .right ul li a:hover {
+  color: #ef2853;
+  text-decoration: none;
+}
+
+.gt-banner img {
+  width: 100%;
+  height: 60vh;
+}
+
+.box-why {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-head {
+  margin-top: 40px;
+}
+
+.back-color p {
+  border: 2px solid #ef2853;
+  border-radius: 10px;
+}
+
+.section-head h3 {
+  position: relative;
+  padding: 0;
+  color: #ef2853;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 30px;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.section-head h3::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #ef2853;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.section-head h3 span {
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: #212529;
+}
+
+.section-head P {
+  color: #666666;
+  font-size: 20px;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
+.section-head2 {
+  background-color: #ffa0b4;
+}
+
+.card {
+  box-shadow: 0 0 15px #ddd;
+}
+
+.tcontent {
+  position: relative;
+}
+
+.tcontent .hover-card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  /*    background-color: #ddd;*/
+}
+
+.tcontent .hover-card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.tcontent .hover-card:hover .card-image img {
+  transform: rotate(3deg) scale(1.1, 1.1);
+}
+
+.tcontent .hover-card .card-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(87, 87, 87, 0.8), transparent);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: 0.3s ease-out;
+}
+
+.tcontent .hover-card:hover .card-shadow {
+  transform: scaleY(1);
+}
+
+.tcontent .hover-card .card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-content .ribbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 40px;
+  background-color: #ef2853;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10%;
+  left: -20%;
+}
+
+.tcontent .hover-card .card-content .card-like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.25);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.tcontent .hover-card .card-content .card-like:hover {
+  background-color: rgb(239, 40, 83);
+}
+
+.tcontent .hover-card .card-content .card-like i {
+  font-size: 40px;
+  color: #fff;
+}
+
+.tcontent .hover-card .card-content .card-price {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+}
+
+.tcontent .hover-card .card-content .card-price span {
+  font-size: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.tcontent .hover-card .card-content .book-now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tcontent .hover-card .card-content .book-now a {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  color: #fff;
+  background-color: #ee2654;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+}
+.my-card .card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tcontent .hover-card:hover .card-content .book-now a:hover {
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+}
+
+.tcontent .card-location {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-location p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-info {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  color: #464545;
+}
+
+.tcontent .card-star {
+  padding: 18px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffbc00;
+}
+
+.tcontent .card-star span {
+  color: #ef2853;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-dur {
+  padding: 0px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-dur p {
+  display: inline-block;
+}
+.card {
+  box-shadow: 0 0 15px #ddd;
+}
+
+.tcontent {
+  position: relative;
+}
+
+.tcontent .hover-card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  /*    background-color: #ddd;*/
+}
+
+.tcontent .hover-card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.tcontent .hover-card:hover .card-image img {
+  transform: rotate(3deg) scale(1.1, 1.1);
+}
+
+.tcontent .hover-card .card-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(87, 87, 87, 0.8), transparent);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: 0.3s ease-out;
+}
+
+.tcontent .hover-card:hover .card-shadow {
+  transform: scaleY(1);
+}
+
+.tcontent .hover-card .card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-content .ribbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 40px;
+  background-color: #ef2853;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10%;
+  left: -20%;
+}
+
+.tcontent .hover-card .card-content .card-like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.25);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.tcontent .hover-card .card-content .card-like:hover {
+  background-color: rgb(239, 40, 83);
+}
+
+.tcontent .hover-card .card-content .card-like i {
+  font-size: 40px;
+  color: #fff;
+}
+
+.tcontent .hover-card .card-content .card-price {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+}
+
+.tcontent .hover-card .card-content .card-price span {
+  font-size: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.tcontent .card-location {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-location p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-info {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  color: #464545;
+}
+
+.tcontent .card-star {
+  padding: 18px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffbc00;
+}
+
+.tcontent .card-star span {
+  color: #ef2853;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-dur {
+  padding: 0px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-dur p {
+  display: inline-block;
+}
+
+.card {
+  box-shadow: 0 0 15px #ddd;
+}
+
+.tcontent {
+  position: relative;
+}
+
+.tcontent .hover-card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  /*    background-color: #ddd;*/
+}
+
+.tcontent .hover-card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.tcontent .hover-card:hover .card-image img {
+  transform: rotate(3deg) scale(1.1, 1.1);
+}
+
+.tcontent .hover-card .card-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(87, 87, 87, 0.8), transparent);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: 0.3s ease-out;
+}
+
+.tcontent .hover-card:hover .card-shadow {
+  transform: scaleY(1);
+}
+
+.tcontent .hover-card .card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.tcontent .hover-card .card-content .ribbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 25px;
+  background-color: #ef2853;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 14%;
+  left: -20%;
+}
+
+.tcontent .hover-card .card-content .card-like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.25);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.tcontent .hover-card .card-content .card-like:hover {
+  background-color: rgb(239, 40, 83);
+}
+
+.tcontent .hover-card .card-content .card-like i {
+  font-size: 40px;
+  color: #fff;
+}
+
+.tcontent .hover-card .card-content .card-price {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+}
+
+.tcontent .hover-card .card-content .card-price span {
+  font-size: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.tcontent .card-location {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-location p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-info {
+  border-bottom: 1px dashed #ddd;
+  padding: 18px 0px;
+  margin: 0 15px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  color: #464545;
+}
+
+.tcontent .card-star {
+  padding: 18px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffbc00;
+}
+
+.tcontent .card-star span {
+  color: #ef2853;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tcontent .card-dur {
+  padding: 0px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.tcontent .card-dur p {
+  display: inline-block;
+}
+
+.t-head h5 {
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tour-text li {
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  color: #666666;
+  font-size: 18px;
+}
+
+.taj-text {
+  line-height: 30px;
+}
+
+.gt-banner-mobile img{
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .gt-banner-mobile img {
+    display: block;
+    width: 100%;
+  }
+  .gt-banner img {
+    display: none;
+  }
+}
